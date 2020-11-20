@@ -4,7 +4,7 @@ Docker image for Killing Temple KF2 servers.
 ## How to build
 ```
 git clone https://github.com/killing-temple/kf2-docker.git
-cd ./kf2-docker
+cd ./kf2-docker/kf2server-launcher
 docker build -t kt/kf2:1.0 .
 ```
 

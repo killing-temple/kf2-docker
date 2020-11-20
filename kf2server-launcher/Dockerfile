@@ -4,7 +4,7 @@ RUN apk add --update --no-cache \
     tmux \
     git
 
-RUN useradd -m steam
+RUN adduser steam -h /home/steam -D
 WORKDIR /home/steam
 USER steam
 
