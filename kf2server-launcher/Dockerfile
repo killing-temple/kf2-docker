@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-RUN apk add --update --no-cache \
+RUN apt-get update && apt-get install -y \
     tmux \
     git
 
