@@ -1,9 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:focal
 
 RUN apk add --update --no-cache \
     tmux \
-    git \
-    bash
+    git
 
 RUN adduser steam -h /home/steam -D
 WORKDIR /home/steam
