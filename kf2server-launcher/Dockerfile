@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     tmux \
     git
 
-RUN adduser steam -h /home/steam -D
+RUN useradd -m steam
 WORKDIR /home/steam
 USER steam
 
