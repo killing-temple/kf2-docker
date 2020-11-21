@@ -2,7 +2,8 @@ FROM ubuntu:focal
 
 RUN apt-get update && apt-get install -y \
     tmux \
-    git
+    git \
+    libcurl3
 
 RUN useradd -m steam
 WORKDIR /home/steam
