@@ -1,11 +1,11 @@
-FROM alpine:latest
+FROM ubuntu:focal
 
 RUN apk add --update --no-cache \
     tmux \
     git \
-    libcurl
+    libcurl4
 
-RUN adduser steam -h /home/steam -D
+RUN useradd -m steam
 WORKDIR /home/steam
 USER steam
 
