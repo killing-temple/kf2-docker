@@ -2,7 +2,8 @@ FROM alpine:latest
 
 RUN apk add --update --no-cache \
     tmux \
-    git
+    git \
+    bash
 
 RUN adduser steam -h /home/steam -D
 WORKDIR /home/steam
