@@ -3,7 +3,7 @@ FROM alpine:latest
 RUN apk add --update --no-cache \
     tmux \
     git \
-    libcurl4
+    libcurl
 
 RUN adduser steam -h /home/steam -D
 WORKDIR /home/steam
