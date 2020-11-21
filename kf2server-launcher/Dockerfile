@@ -1,7 +1,6 @@
 FROM ubuntu:focal
 
 RUN apt-get update && apt-get install -y \
-    tmux \
     git \
     libcurl4
 
