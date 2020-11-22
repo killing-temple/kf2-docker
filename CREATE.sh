@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Game Port: 7777
-# Query Port: 27015
-# Steam Port: 20560
-# Web Admin: 8080
+# Game Port: 7777 /udp
+# Query Port: 27015 /udp
+# Steam Port: 20560 /udp
+# Web Admin: 8080 /tcp
 
-sudo docker 
 sudo docker rm --force main
 sudo docker run -d --name=main \
     -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
