@@ -5,6 +5,9 @@
 # Steam Port: 20560 /udp
 # Web Admin: 8080 /tcp
 
+# stable: /home/steam/.steam/SteamApps/common/kf2server
+# beta:   /home/steam/.steam/SteamApps/beta/kf2server
+
 sudo docker rm --force main
 sudo docker run -d --name=main \
     -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
@@ -37,7 +40,7 @@ sudo docker run -d --name=main3 \
 
 sudo docker rm --force mainbeta
 sudo docker run -d --name=mainbeta \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -p 0.0.0.0:8083:8080/tcp \
     -p 0.0.0.0:7780:7777/udp \
@@ -47,7 +50,7 @@ sudo docker run -d --name=mainbeta \
 
 sudo docker rm --force mainbeta2
 sudo docker run -d --name=mainbeta2 \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -p 0.0.0.0:8084:8080/tcp \
     -p 0.0.0.0:7781:7777/udp \
@@ -57,7 +60,7 @@ sudo docker run -d --name=mainbeta2 \
 
 sudo docker rm --force mainbeta3
 sudo docker run -d --name=mainbeta3 \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -p 0.0.0.0:8085:8080/tcp \
     -p 0.0.0.0:7782:7777/udp \
