@@ -5,7 +5,8 @@
 # Steam Port: 20560
 # Web Admin: 8080
 
-sudo docker rm main
+sudo docker 
+sudo docker rm --force main
 sudo docker run -d --name=main \
     -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main \
@@ -15,7 +16,7 @@ sudo docker run -d --name=main \
     -p 127.0.0.1:20560:20560/udp \
     kt/kf2:1.0
 
-sudo docker rm main2
+sudo docker rm --force main2
 sudo docker run -d --name=main2 \
     -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main \
@@ -25,7 +26,7 @@ sudo docker run -d --name=main2 \
     -p 127.0.0.1:20561:20561/udp \
     kt/kf2:1.0
 
-sudo docker rm main3
+sudo docker rm --force main3
 sudo docker run -d --name=main3 \
     -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -p 127.0.0.1:8082:8082/tcp \
