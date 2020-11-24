@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4 \
     sudo
 
-RUN useradd -m steam
+RUN useradd -m steam && echo "steam:steam" | chpasswd && adduser steam sudo
 WORKDIR /home/steam
 USER steam
 
