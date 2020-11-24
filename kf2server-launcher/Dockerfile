@@ -2,7 +2,8 @@ FROM ubuntu:focal
 
 RUN apt-get update && apt-get install -y \
     git \
-    libcurl4
+    libcurl4 \
+    sudo
 
 RUN useradd -m steam
 WORKDIR /home/steam
