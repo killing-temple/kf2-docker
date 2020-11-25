@@ -3,7 +3,8 @@ FROM ubuntu:focal
 RUN apt-get update && apt-get install -y \
     git \
     libcurl4 \
-    sudo
+    nano \
+    wget
 
 RUN useradd -m steam && echo "steam:steam" | chpasswd && adduser steam sudo
 WORKDIR /home/steam
