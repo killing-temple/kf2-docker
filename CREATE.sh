@@ -15,7 +15,7 @@ sudo cp ./kf2-game-configs/* /home/steam/.steam/SteamApps/beta/kf2server/KFGame/
 
 sudo docker rm --force main
 sudo docker run -d --name=main \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main \
     -e WEBPORT=8080 \
     -p 0.0.0.0:8080:8080/tcp \
@@ -26,7 +26,7 @@ sudo docker run -d --name=main \
 
 sudo docker rm --force main2
 sudo docker run -d --name=main2 \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main \
     -e WEBPORT=8081 \
     -p 0.0.0.0:8081:8080/tcp \
@@ -37,7 +37,7 @@ sudo docker run -d --name=main2 \
 
 sudo docker rm --force main3
 sudo docker run -d --name=main3 \
-    -v "/home/steam/.steam/SteamApps/common/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main \
     -e WEBPORT=8082 \
     -p 0.0.0.0:8082:8080/tcp \
@@ -48,7 +48,7 @@ sudo docker run -d --name=main3 \
 
 sudo docker rm --force mainbeta
 sudo docker run -d --name=mainbeta \
-    -v "/home/steam/.steam/SteamApps/beta/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -e WEBPORT=8083 \
     -p 0.0.0.0:8083:8080/tcp \
@@ -59,7 +59,7 @@ sudo docker run -d --name=mainbeta \
 
 sudo docker rm --force mainbeta2
 sudo docker run -d --name=mainbeta2 \
-    -v "/home/steam/.steam/SteamApps/beta/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -e WEBPORT=8084 \
     -p 0.0.0.0:8084:8080/tcp \
@@ -70,7 +70,7 @@ sudo docker run -d --name=mainbeta2 \
 
 sudo docker rm --force mainbeta3
 sudo docker run -d --name=mainbeta3 \
-    -v "/home/steam/.steam/SteamApps/beta/kf2server:/kf2server" \
+    -v "/home/steam/.steam/SteamApps/beta/kf2server:/home/steam/kf2server" \
     -e KF2SERVER=main-beta \
     -e WEBPORT=8085 \
     -p 0.0.0.0:8085:8080/tcp \
