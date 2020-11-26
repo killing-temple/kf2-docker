@@ -27,7 +27,7 @@ rm -rf /tmp/kf2-game-configs
 
 if [[ $1 == "dallas" ]] ; then
 
-    sudo docker rm --force dallas8082
+    sudo docker rm --force dallas8081
     sudo docker run -d --name=dallas8081 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=dallas8081 \
@@ -38,7 +38,7 @@ if [[ $1 == "dallas" ]] ; then
         -p 0.0.0.0:20561:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force dallas8083
+    sudo docker rm --force dallas8082
     sudo docker run -d --name=dallas8082 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=dallas8082 \
@@ -49,7 +49,7 @@ if [[ $1 == "dallas" ]] ; then
         -p 0.0.0.0:20562:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force dallas8084
+    sudo docker rm --force dallas8083
     sudo docker run -d --name=dallas8083 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=dallas8083 \
@@ -60,7 +60,7 @@ if [[ $1 == "dallas" ]] ; then
         -p 0.0.0.0:20563:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force dallas8085
+    sudo docker rm --force dallas8084
     sudo docker run -d --name=dallas8084 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=dallas8084 \
@@ -120,7 +120,7 @@ fi
 
 if [[ $1 == "toronto" ]] ; then
 
-    sudo docker rm --force toronto8082
+    sudo docker rm --force toronto8081
     sudo docker run -d --name=toronto8081 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=toronto8081 \
@@ -131,7 +131,7 @@ if [[ $1 == "toronto" ]] ; then
         -p 0.0.0.0:20561:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force toronto8083
+    sudo docker rm --force toronto8082
     sudo docker run -d --name=toronto8082 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=toronto8082 \
@@ -142,7 +142,7 @@ if [[ $1 == "toronto" ]] ; then
         -p 0.0.0.0:20562:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force toronto8084
+    sudo docker rm --force toronto8083
     sudo docker run -d --name=toronto8083 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=toronto8083 \
@@ -153,7 +153,7 @@ if [[ $1 == "toronto" ]] ; then
         -p 0.0.0.0:20563:20560/udp \
         kt/kf2:1.0
 
-    sudo docker rm --force toronto8085
+    sudo docker rm --force toronto8084
     sudo docker run -d --name=toronto8084 \
         -v "/home/steam/.steam/SteamApps/common/kf2server:/home/steam/kf2server:ro" \
         -e KF2SERVER=toronto8084 \
