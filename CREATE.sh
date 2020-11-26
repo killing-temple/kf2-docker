@@ -12,6 +12,7 @@ cd /tmp;
 git clone https://github.com/killing-temple/kf2-game-configs.git;
 sudo cp ./kf2-game-configs/* /home/steam/.steam/SteamApps/common/kf2server/KFGame/Config/ -R
 sudo cp ./kf2-game-configs/* /home/steam/.steam/SteamApps/beta/kf2server/KFGame/Config/ -R
+rm -rf /tmp/kf2-game-configs
 
 sudo docker rm --force main
 sudo docker run -d --name=main \
