@@ -12,7 +12,7 @@
 # - dallas
 # - toronto
 
-if [[ $1 -eq 0 ]] ; then
+if [[ $# -eq 0 ]] ; then
     echo 'No location provided - exiting.'
     exit 1
 fi
